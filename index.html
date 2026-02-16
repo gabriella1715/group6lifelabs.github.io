@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Root Cause Analysis - Group 6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Root Cause Analysis - Group 6</h1>
+    <button class="menu-button" onclick="toggleMenu()">☰ Menu</button>
+  </header>
+
+  <nav id="menu" style="display:none;">
+    <button onclick="showPage('home')" class="nav-button">Home</button>
+    <button onclick="showPage('problem')" class="nav-button">Problem</button>
+    <button onclick="showPage('analysis')" class="nav-button">Analysis</button>
+    <button onclick="showPage('solution')" class="nav-button">Solution</button>
+  </nav>
+
+  <!-- Home Page -->
+  <div id="home" class="page-section">
+    <h2>Welcome to Our Homepage</h2>
+    <p>This is the Homepage Content that includes the main problem or the root cause of the problem.</p>
+  </div>
+
+  <!-- Problem Page -->
+  <div id="problem" class="page-section" style="display:none;">
+    <h2>Problem Statement</h2>
+    <p>Details about the problem go here...</p>
+  </div>
+
+  <!-- Analysis Page -->
+  <div id="analysis" class="page-section" style="display:none;">
+    <h2>Root Cause Analysis</h2>
+    <p>Analysis details go here...</p>
+  </div>
+
+  <!-- Solution Page -->
+  <div id="solution" class="page-section" style="display:none;">
+    <h2>Proposed Solutions</h2>
+    <p>Solutions go here...</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
