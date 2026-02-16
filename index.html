@@ -4,58 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group 6 Life Labs</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            display: flex;
-            background-color: #333;
-            padding: 10px;
-        }
-        .navbar button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="navbar">
-        <button onclick="window.location.href='index.html'">Home</button>
+        <button class="nav-btn" onclick="showPage('home')">🏠 Home</button>
         <div class="dropdown">
-            <button>Menu</button>
+            <button class="nav-btn menu-btn">☰ Menu</button>
             <div class="dropdown-content">
-                <a href="#main-problems">1. Main Problems</a>
-                <a href="#root-cause">2. Root Cause</a>
+                <a href="#" onclick="showPage('mainproblems')">1. Main Problems</a>
+                <a href="#" onclick="showPage('rootcause')">2. Root Cause</a>
             </div>
         </div>
     </div>
-    <h1>Welcome to the Group 6 Life Labs!</h1>
-    <p>Your introduction goes here.</p>
+
+    <!-- Home Page -->
+    <div id="home" class="content-section">
+        <h1>Welcome to Group 6 Life Labs</h1>
+        <p>This is the Introduction Homepage. Explore our Root Cause Analysis project by clicking on the Menu button to navigate through:</p>
+        <ul>
+            <li><strong>Main Problems</strong> - Discover the key issues</li>
+            <li><strong>Root Cause</strong> - Understand the underlying causes</li>
+        </ul>
+    </div>
+
+    <!-- Main Problems Page -->
+    <div id="mainproblems" class="content-section" style="display:none;">
+        <h1>1. Main Problems</h1>
+        <p>Details about the main problems will appear here...</p>
+        <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+    </div>
+
+    <!-- Root Cause Page -->
+    <div id="rootcause" class="content-section" style="display:none;">
+        <h1>2. Root Cause</h1>
+        <p>Root cause analysis details will appear here...</p>
+        <button class="back-btn" onclick="showPage('home')">← Back to Home</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
