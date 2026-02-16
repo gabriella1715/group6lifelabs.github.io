@@ -1,0 +1,71 @@
+.body {
+    background: linear-gradient(135deg, purple, blue);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: red;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.menu-button {
+    background-color: teal;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: darkcyan;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+nav button {
+    background-color: yellow;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+nav button:hover {
+    transform: scale(1.1);
+}
+
+.section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    .menu-button {
+        width: 100%;
+    }
+    nav button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
